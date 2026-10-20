@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:padding="20dp"
+    android:background="@drawable/topic_item_bg"
+    android:layout_marginBottom="16dp">
+
+    <!-- Quiz Title -->
+    <TextView
+        android:id="@+id/quizTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz Title"
+        android:textColor="#B71C1C"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Circular progress -->
+    <ImageView
+        android:id="@+id/quizCircle"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/circle_empty"
+        android:layout_marginTop="5dp" />
+
+    <!-- Green check -->
+    <ImageView
+        android:id="@+id/quizCheck"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_check_green"
+        android:visibility="gone"
+        android:layout_marginTop="5dp" />
+
+    <!-- Score text  -->
+    <TextView
+        android:id="@+id/quizScoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/quizTitle"
+        android:text="0 / 0"
+        android:textColor="#B71C1C"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" />
+
+</RelativeLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".QuizActivity">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/white"
+        android:contentDescription="background" />
+
+    <!-- Quiz Title -->
+    <TextView
+        android:id="@+id/quizTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:background="@drawable/title_bg_red"
+        android:text="Quiz Title"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- FIXED QUESTION CONTAINER -->
+    <LinearLayout
+        android:id="@+id/questionContainer"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:gravity="center"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/quizTitleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/questionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxWidth="320dp"
+            android:text="Question goes here"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="8dp"/>
+    </LinearLayout>
+
+    <!-- OPTION A -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/optionA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Option A"
+        android:textColor="#000000"
+        android:backgroundTint="@android:color/transparent"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        app:strokeColor="#000000"
+        app:strokeWidth="2dp"
+        app:cornerRadius="12dp"
+        app:rippleColor="#33000000"
+        app:layout_constraintTop_toBottomOf="@id/questionContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- OPTION B -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/optionB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Option B"
+        android:textColor="#000000"
+        android:backgroundTint="@android:color/transparent"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        app:strokeColor="#000000"
+        app:strokeWidth="2dp"
+        app:cornerRadius="12dp"
+        app:rippleColor="#33000000"
+        app:layout_constraintTop_toBottomOf="@id/optionA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- OPTION C -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/optionC"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Option C"
+        android:textColor="#000000"
+        android:backgroundTint="@android:color/transparent"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        app:strokeColor="#000000"
+        app:strokeWidth="2dp"
+        app:cornerRadius="12dp"
+        app:rippleColor="#33000000"
+        app:layout_constraintTop_toBottomOf="@id/optionB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- OPTION D -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/optionD"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Option D"
+        android:textColor="#000000"
+        android:backgroundTint="@android:color/transparent"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        app:strokeColor="#000000"
+        app:strokeWidth="2dp"
+        app:cornerRadius="12dp"
+        app:rippleColor="#33000000"
+        app:layout_constraintTop_toBottomOf="@id/optionC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Score Text -->
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Score: 0"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/optionD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Back to Dashboard -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBackToDashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Back to Quiz List"
+        android:textColor="#000000"
+        android:backgroundTint="@android:color/transparent"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        app:strokeColor="#000000"
+        app:strokeWidth="2dp"
+        app:cornerRadius="12dp"
+        app:rippleColor="#33000000"
+        app:layout_constraintTop_toBottomOf="@id/scoreText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Go to Performance -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnToPerformance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Go to Performance"
+        android:textColor="#000000"
+        android:backgroundTint="@android:color/transparent"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        app:strokeColor="#000000"
+        app:strokeWidth="2dp"
+        app:cornerRadius="12dp"
+        app:rippleColor="#33000000"
+        app:layout_constraintTop_toBottomOf="@id/btnBackToDashboard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

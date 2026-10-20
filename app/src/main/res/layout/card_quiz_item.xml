@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginTop="8dp"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="18dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <!--  Circular Progress / Check Icon -->
+        <FrameLayout
+            android:id="@+id/circleContainer"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true">
+
+            <!-- Circle Progress -->
+            <ImageView
+                android:id="@+id/progressCircle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/circle_progress"
+                android:visibility="visible" />
+
+            <!-- Green Check (shown on perfect score) -->
+            <ImageView
+                android:id="@+id/checkIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_check_green"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <!--  Quiz Title -->
+        <TextView
+            android:id="@+id/quizTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/circleContainer"
+            android:layout_marginStart="20dp"
+            android:text="Quiz 1"
+            android:textColor="#B71C1C"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!--  Score -->
+        <TextView
+            android:id="@+id/quizScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quizTitle"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/circleContainer"
+            android:text="0 / 10"
+            android:textColor="#B71C1C"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

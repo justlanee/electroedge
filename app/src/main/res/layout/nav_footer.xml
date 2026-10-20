@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="#F5F9FF">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Made By Group 25"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#0D47A1"
+        android:gravity="center"
+        android:paddingBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REVEREZA, CYRUS JOHN MOLINA\nABRASALDO, SHEQUIM JOHN CARPIO\nVELASCO, CHRISTIAN MARK BALDERAS\nBUENAVENTURA, CHRISTIAN ROBIN PASCUAL\nTORRES, JASLYN KAYE"
+        android:textSize="14sp"
+        android:textColor="#0D47A1"
+        android:gravity="center" />
+</LinearLayout>

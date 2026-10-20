@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:background="@drawable/topic_item_bg"
+    android:layout_marginBottom="16dp"
+    android:elevation="6dp">
+
+    <!--  Chapter Badge -->
+    <TextView
+        android:id="@+id/chapterBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chapter_badge_bg"
+        android:text="Chapter 1"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="4dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"/>
+
+    <!--  Topic Title -->
+    <TextView
+        android:id="@+id/topicItemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp"
+        android:layout_below="@id/chapterBadge"
+        android:text="Topic Title"
+        android:textColor="#B71C1C"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!--  Lock Icon -->
+    <ImageView
+        android:id="@+id/lockIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_lock"
+        app:tint="#B71C1C"
+        android:visibility="gone" />
+
+</RelativeLayout>

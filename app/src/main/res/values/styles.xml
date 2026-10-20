@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ✨ Dashboard Button Style -->
+    <style name="DashboardButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/dashboard_button_bg</item> <!-- ✅ custom background -->
+        <item name="android:textColor">#0D47A1</item> <!-- blue text -->
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- 🧭 Navigation Drawer Menu Text Style -->
+    <style name="NavDrawerTextStyle">
+        <item name="android:textSize">20sp</item>         <!-- ✨ Bigger font -->
+        <item name="android:textColor">#0D47A1</item>     <!-- Same blue as dashboard -->
+        <item name="android:textStyle">bold</item>        <!-- Bold text -->
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="QuizCard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:background">@drawable/white_blue_outline_button</item>
+        <item name="android:textColor">#B71C1C</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:elevation">6dp</item>
+    </style>
+
+</resources>

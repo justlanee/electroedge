@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sky_blue">
+
+    <!-- Back Button (Top Left) -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@android:color/transparent"
+        app:cornerRadius="8dp"
+        app:strokeColor="#FF0000"
+        app:strokeWidth="2dp"
+        app:icon="@drawable/ic_arrow_back"
+        app:iconTint="#FF0000"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-55dp"
+        android:layout_toEndOf="@id/btnBack"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Flashcards"
+        android:textColor="#FF0000"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!-- Flashcard Container -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/flashCard"
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:layout_below="@id/titleText"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:strokeColor="#FF0000"
+        app:strokeWidth="4dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <!-- RelativeLayout inside CardView -->
+        <RelativeLayout
+            android:id="@+id/cardContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- FRONT (Image) -->
+            <ImageView
+                android:id="@+id/frontImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Flashcard front"
+                android:scaleType="centerCrop" />
+
+            <!-- BACK (Definition) -->
+            <TextView
+                android:id="@+id/backText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:padding="24dp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <!-- ⬅ Left Arrow -->
+            <TextView
+                android:id="@+id/arrowLeft"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="&lt;"
+                android:textSize="28sp"
+                android:textColor="#FF0000"
+                android:background="@android:color/transparent" />
+
+            <!-- ➡ Right Arrow -->
+            <TextView
+                android:id="@+id/arrowRight"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="&gt;"
+                android:textSize="28sp"
+                android:textColor="#FF0000"
+                android:background="@android:color/transparent" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

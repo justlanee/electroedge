@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="background"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sky_blue" />
+
+    <!-- Foreground content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <!-- White Card with Red Border (LinearLayout) -->
+        <LinearLayout
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/white_card_red_border"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- App Logo (top-left) -->
+                <ImageView
+                    android:id="@+id/navHeaderProfilePic"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/profile_circle_bg"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/ic_launchers5_foreground" />
+
+                <!-- Name Label (bold) -->
+                <TextView
+                    android:id="@+id/nameLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toEndOf="@id/navHeaderProfilePic"
+                    android:text="Enter your Name:"
+                    android:textColor="#D32F2F"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Name Input -->
+                <EditText
+                    android:id="@+id/nameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nameLabel"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@id/navHeaderProfilePic"
+                    android:backgroundTint="#D32F2F"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:textColor="#D32F2F"
+                    android:textColorHint="#D32F2F" />
+
+                <!-- Enter Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/submitButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nameInput"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toEndOf="@id/navHeaderProfilePic"
+                    android:backgroundTint="@android:color/transparent"
+                    android:text="Enter"
+                    android:textColor="#D32F2F"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="#D32F2F"
+                    app:strokeWidth="2dp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- Welcome Text -->
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textColor="#D32F2F"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <!-- Start Reviewing Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/startReviewButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@android:color/transparent"
+            android:text="Start Reviewing"
+            android:textColor="#B71C1C"
+            android:visibility="gone"
+            app:cornerRadius="12dp"
+            app:strokeColor="#B71C1C"
+            app:strokeWidth="2dp" />
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launchers3"
+        android:label="@string/ElectroEdge"
+        android:roundIcon="@mipmap/ic_launchers3"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Project1">
+
+        <!-- Activities -->
+        <activity android:name=".FlashcardsActivity"
+        android:exported="true"/>
+
+        <activity android:name=".FlashcardList"
+            android:exported="true"/>
+
+        <activity
+            android:name=".PerformanceActivity"
+            android:exported="true"/>
+
+
+        <activity
+            android:name=".Welcome"
+            android:exported="true" />
+
+        <activity
+            android:name=".Dashboard"
+            android:exported="false" />
+
+        <!-- User startup screen (launcher) -->
+        <activity
+            android:name=".User_startup"
+            android:windowSoftInputMode="adjustResize"
+        android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Topic and Viewer -->
+        <activity
+            android:name=".TopicList"
+            android:exported="true" />
+        <activity
+            android:name=".topicviewer"
+            android:exported="true" />
+
+        <!-- FileProvider for Word/PDF files -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- ✅ Quiz Screens -->
+        <activity
+            android:name=".QuizList"
+            android:exported="true" />
+        <activity
+            android:name=".QuizActivity"
+            android:exported="true" />
+
+    </application>
+
+</manifest>
