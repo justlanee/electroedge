@@ -6,24 +6,24 @@
 
 ## Features
 
-- ** Personalized User Onboarding**
+- Personalized User Onboarding
   - Custom nickname setup stored locally via `SharedPreferences`.
   - Easy profile switching ("Change Nickname") from the navigation drawer.
 
-- ** Progressive Study Modules (PDF Reader)**
+- Progressive Study Modules (PDF Reader)
   - Built-in PDF topic viewer covering 8 core chapters of electronics.
   - **Mastery-Based Unlocking:** Chapter 1 starts unlocked; subsequent chapters unlock automatically when you score **80% or higher** on the preceding chapter's quiz.
 
-- ** Interactive Visual Flashcards**
+- Interactive Visual Flashcards
   - Organized by topic sets to reinforce component symbols, formulas, and definitions.
   - Tap-to-flip card animations (`flip_in` / `flip_out`) and left/right swipe gestures to navigate between cards.
 
-- ** Chapter Quizzes**
+- Chapter Quizzes
   - 8 multiple-choice quizzes aligned with each curriculum chapter.
   - Progressive unlocking tied to quiz mastery (80%+ threshold).
   - Automatic high-score persistence using **Room Database** (`SQLite`).
 
-- ** Performance Dashboard**
+- Performance Dashboard
   - Visualizes quiz scores and completion percentages across all 8 chapters.
   - Custom circular progress indicators (`ProgressCircleView`) with checkmark badges upon achieving 100%.
 
